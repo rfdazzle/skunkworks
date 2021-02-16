@@ -15,9 +15,8 @@ Relevant paths are as follows
 \Eagle Dynamics\DCS World Open Beta\Mods\aircraft\Cockpit\Scripts\command_refs.lua
 
 
-#####################################################
 ###Thrustmaster Target script for Warthog throttle###
-#####################################################
+
 Move TMWarthogDX128.tmc to the scripts directory within your Thrustmaster TARGET installation directory
 
 Open TMWarthogDX128 with Thrustmaster TARGET Script Editor
