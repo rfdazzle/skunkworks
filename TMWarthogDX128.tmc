@@ -1,0 +1,84 @@
+include "targetdx128.tmh"
+int main()
+{
+	Configure(&HCougar, MODE_EXCLUDED);
+	Configure(&Joystick, MODE_EXCLUDED);
+	Configure(&JoystickF18, MODE_EXCLUDED);
+	Configure(&A320Pilot, MODE_EXCLUDED);
+	Configure(&A320Copilot, MODE_EXCLUDED);
+	Configure(&T16000, MODE_EXCLUDED);
+	Configure(&T16000L, MODE_EXCLUDED);
+	Configure(&LMFD, MODE_EXCLUDED);
+	Configure(&RMFD, MODE_EXCLUDED);
+	Configure(&TFRPRudder, MODE_EXCLUDED);
+	Configure(&TWCSThrottle, MODE_EXCLUDED);
+	Configure(&TFRPHARudder, MODE_EXCLUDED);
+	if(Init(&EventHandle)) return 1;
+	SetKBRate(32, 50);
+	SetKBLayout(KB_ENG);
+	SetShiftButton(0, 0, 0, 0, 0, 0);
+	MapKey(&Throttle, SC, DX1);
+	MapKey(&Throttle, MSU, DX2);
+	MapKey(&Throttle, MSD, DX3);
+	MapKey(&Throttle, MSL, DX4);
+	MapKey(&Throttle, MSR, DX5);
+	MapKey(&Throttle, MSP, DX6);
+	MapKey(&Throttle, SPDF, DX7);
+	MapKey(&Throttle, SPDM, PULSE+DX8);
+	MapKey(&Throttle, SPDB, DX9);
+	MapKey(&Throttle, BSF, PULSE+DX10);
+	MapKey(&Throttle, BSM, PULSE+DX11);
+	MapKey(&Throttle, BSB, PULSE+DX12);
+	MapKey(&Throttle, CHF, DX13);
+	MapKey(&Throttle, CHM, PULSE+DX14);
+	MapKey(&Throttle, CHB, DX15);
+	MapKey(&Throttle, PSF, PULSE+DX16);
+	MapKey(&Throttle, PSM, PULSE+DX17);
+	MapKey(&Throttle, PSB, PULSE+DX18);
+	MapKey(&Throttle, CSU, DX19);
+	MapKey(&Throttle, CSD, DX20);
+	MapKey(&Throttle, CSL, DX21);
+	MapKey(&Throttle, CSR, DX22);
+	MapKey(&Throttle, LTB, DX23);
+	MapKey(&Throttle, EFLNORM, PULSE+DX24);
+	MapKey(&Throttle, EFLOVER, PULSE+DX25);
+	MapKey(&Throttle, EFRNORM, PULSE+DX26);
+	MapKey(&Throttle, EFROVER, PULSE+DX27);
+	MapKey(&Throttle, EOLIGN, DX28);
+	MapKey(&Throttle, EOLNORM, PULSE+DX29);
+	MapKey(&Throttle, EOLMOTOR, PULSE+DX30);
+	MapKey(&Throttle, EORIGN, DX31);
+	MapKey(&Throttle, EORNORM, PULSE+DX32);
+	MapKey(&Throttle, EORMOTOR, DX33);
+	MapKey(&Throttle, APUON, PULSE+DX34);
+	MapKey(&Throttle, APUOFF, PULSE+DX35);
+	MapKey(&Throttle, LDGH, PULSE+DX36);
+	MapKey(&Throttle, FLAPU, DX37);
+	MapKey(&Throttle, FLAPM, PULSE+DX38);
+	MapKey(&Throttle, FLAPD, DX39);
+	MapKey(&Throttle, EACON, DX40);
+	MapKey(&Throttle, EACOFF, DX41);
+	MapKey(&Throttle, RDRNRM, DX42);
+	MapKey(&Throttle, RDRDIS, DX43);
+	MapKey(&Throttle, APPAT, DX44);
+	MapKey(&Throttle, APAH, DX45);
+	MapKey(&Throttle, APALT, DX46);
+	MapKey(&Throttle, APENG, DX47);
+	MapKey(&Throttle, IDLELON, DX48);
+	MapKey(&Throttle, IDLERON, DX49);
+	MapAxis(&Throttle, SCX, DX_XROT_AXIS, AXIS_NORMAL, MAP_ABSOLUTE);
+	SetSCurve(&Throttle, SCX, 0, 0, 0, 0, 0);
+	MapAxis(&Throttle, SCY, DX_YROT_AXIS, AXIS_NORMAL, MAP_ABSOLUTE);
+	SetSCurve(&Throttle, SCY, 0, 0, 0, 0, 0);
+	MapAxis(&Throttle, THR_RIGHT, DX_Z_AXIS, AXIS_NORMAL, MAP_ABSOLUTE);
+	SetSCurve(&Throttle, THR_RIGHT, 0, 0, 0, 0, 0);
+	MapAxis(&Throttle, THR_LEFT, DX_ZROT_AXIS, AXIS_NORMAL, MAP_ABSOLUTE);
+	SetSCurve(&Throttle, THR_LEFT, 0, 0, 0, 0, 0);
+	MapAxis(&Throttle, THR_FC, DX_SLIDER_AXIS, AXIS_NORMAL, MAP_ABSOLUTE);
+	SetSCurve(&Throttle, THR_FC, 0, 0, 0, 0, 0);
+}
+
+int EventHandle(int type, alias o, int x)
+{
+	DefaultMapping(&o, x);
+}
