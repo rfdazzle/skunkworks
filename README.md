@@ -32,4 +32,4 @@ Create a new desktop shortcut with the following values...
 Target: "C:\Program Files (x86)\Thrustmaster\TARGET\x64\TARGETGUI.exe" -r "C:\Program Files (x86)\Thrustmaster\TARGET\s>
 Start in: "C:\Program Files (x86)\Thrustmaster\TARGET"
 
-Double clicking this shortcut will run TARGETGUI.exe, in a small window, with the script automatically loaded and runni>
+Double clicking this shortcut will run TARGETGUI.exe, in a small window, with the script automatically fired up.
