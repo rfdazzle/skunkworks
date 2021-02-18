@@ -4,7 +4,7 @@
 $DCSPath=Get-ChildItem HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\* | % { Get-ItemProperty $_.PsPath } | Select-Object InstallLocation | Where-Object InstallLocation -Like "*DCS*" | ForEach-Object {$_.InstallLocation}
 $TargetPath=Get-ChildItem HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\* | % { Get-ItemProperty $_.PsPath } | Select-Object InstallLocation | Where-Object InstallLocation -Like "*Thrustmaster*" | ForEach-Object {$_.InstallLocation}
 $F16CInput=$DCSPath+"Mods\aircraft\F-16C\Input\F-16C\joystick\"
-$DCSPath+"Mods\aircraft\A-10C_2\Input\A-10C_2\joystick"
+$A10C2Input=$DCSPath+"Mods\aircraft\A-10C_2\Input\A-10C_2\joystick"
 $UserProfile=[System.Environment]::GetEnvironmentVariable('userprofile')
 $BackupDirectory=$null
 $BackupDirectory=Test-Path -Path "$UserProfile\SkunkworksBackup\"
@@ -32,7 +32,7 @@ function New-Menu {
   $result = $host.ui.PromptForChoice($Title, $Question, $options, 0)
 
    switch ($result) {
-       0 { 'Yes - Installating' }
+       0 { 'Yes - Installing' }
        1 { 'No - Skipping...' }
   }
 
@@ -47,8 +47,10 @@ function Show-Menu {
     Write-Host ""
     Write-Host "Choose your fate...TEST YOUR MIGHT!"
     Write-Host ""
-    Write-Host "1: Backup stock default.lua"
+    Write-Host "1: Backup stock F16-C default.lua"
     Write-Host "2: Overwrite stock F16-C default.lua"
+	Write-Host "3: Backup stock A-10C2 default.lua"
+	Write-Host "4: Overwrite stock A-10C2 default.lua"
     Write-Host "Q: Press 'Q' to quit."
 }
 
@@ -63,7 +65,8 @@ do
     {
     '1' {'Backing up stock default.lua files';Copy-Item "$F16CInput\default.lua" -Destination $UserProfile\SkunkworksBackup\F16C_default.lua}
     '2' {"Copying F16C_default.lua to $F16CInput, overwriting default.lau";Copy-Item ".\F16C\F16C_default.lua" -Destination "$F16CInput\default.lua"}
-    '3' {{'Backing up stock default.lua files';Copy-Item "$F16CInput\default.lua" -Destination $UserProfile\SkunkworksBackup\F16C_default.lua}
+    '3' {'Backing up stock default.lua files';Copy-Item "$A10C2Input\default.lua" -Destination $UserProfile\SkunkworksBackup\A-10_C2_default.lua}
+	'4' {"Copying A-10_C2_default.lua to $A10C2Input, overwriting default.lau";Copy-Item ".\A-10_C2\A-10_C2_default.lua" -Destination "$A10C2Input\default.lua"}
         }
     }
     pause
