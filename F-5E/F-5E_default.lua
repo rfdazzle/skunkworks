@@ -1,14 +1,17 @@
-local cockpit = folder.."../../../Cockpit/Scripts/"
 dofile(cockpit.."devices.lua")
 dofile(cockpit.."command_defs.lua")
 
 local res = external_profile("Config/Input/Aircrafts/common_joystick_binding.lua")
-
-join(res.keyCommands,{
-
 --Custom--
-{	down = weapons_commands.GunsMslCamr,	up = weapons_commands.GunsMslCamr,	cockpit_device_id = devices.WEAPONS_CONTROL,	value_down = 1.0,	value_up = 0.0,	name = _('Guns, Missile and Camera Switch - GUNS MSL & CAMR/OFF'),				category = {_('Left Vertical Panel'),_('HOTAS')}},
-{	down = weapons_commands.GunsMslCamr,	up = weapons_commands.GunsMslCamr,	cockpit_device_id = devices.WEAPONS_CONTROL,	value_down = -1.0,	value_up = 0.0,	name = _('Guns, Missile and Camera Switch - CAMR ONLY/OFF'),					category = {_('Left Vertical Panel'),_('HOTAS')}},
+{down = weapons_commands.GunsMslCamr,up = weapons_commands.GunsMslCamr,cockpit_device_id = devices.WEAPONS_CONTROL,value_down = 1.0,value_up = 0.0, name = _('Guns, Missile and Camera Switch - GUNS MSL & CAMR/OFF'),category = {_('Left Vertical Panel'),_('HOTAS')}},
+{down = weapons_commands.GunsMslCamr,up = weapons_commands.GunsMslCamr,cockpit_device_id = devices.WEAPONS_CONTROL,value_down = -1.0,value_up = 0.0, name = _('Guns, Missile and Camera Switch - CAMR ONLY/OFF'),category = {_('Left Vertical Panel'),_('HOTAS')}},
+{down = jettison_commands.SelectJettSw, up = jettison_commands.SelectJettSw, cockpit_device_id = devices.JETTISON_SYSTEM, value_down = 1.0, value_up = 0.0, name = _('Select Jettison Switch - SELECT POSITION/OFF'), category = {_('Left Vertical Panel')}},
+{down = jettison_commands.SelectJettSw, up = jettison_commands.SelectJettSw,cockpit_device_id = devices.JETTISON_SYSTEM, value_down = -1.0, value_up = 0.0 name = _('Select Jettison Switch - ALL PYLONS/OFF'), category = {_('Left Vertical Panel')}},
+{action = hsi_commands.HSI_course, cockpit_device_id = devices.HSI, name = _('HSI Course Set Knob'), category = {_('Instrument Panel')}},
+{action = hsi_commands.HSI_heading, cockpit_device_id = devices.HSI, name = _('HSI Heading Set Knob'), category = {_('Instrument Panel')}},
+
+-- elements["PTR-LVR-HSI-CRS-272"]	= default_axis(_("HSI Course Set Knob"),  devices.HSI, hsi_commands.HSI_course,  272, 0, 0.05818, false, true)
+-- elements["PTR-LVR-HSI-HDG-271"]	= default_axis(_("HSI Heading Set Knob"), devices.HSI, hsi_commands.HSI_heading, 271, 0, 0.05818, false, true)
 
 ---------------------------------------------
 -- Cheat ------------------------------------
