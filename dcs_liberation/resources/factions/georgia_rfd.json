@@ -1,0 +1,53 @@
+{
+  "country": "Georgia",
+  "name": "Georgia RFD",
+  "authors": "R. F. Dazzle",
+  "description": "<p>A faction that represents Georgia during the South Ossetian War. They will have a lot more aircraft than historically, and no real A2A capability.</p>",
+  "aircrafts": [
+    "L_39ZA",
+    "Su_25",
+	"Su_25T",
+	"F_5E_3",
+    "Mi_8MT",
+    "Mi_24V",
+    "UH_1H"
+  ],
+  "frontline_units": [
+    "APC_BTR_80",
+    "APC_MTLB",
+    "APC_Cobra",
+    "IFV_BMP_1",
+    "IFV_BMP_2",
+    "MBT_T_72B",
+    "MBT_T_55",
+    "SAM_SA_13_Strela_10M3_9A35M3"
+  ],
+  "artillery_units": [
+    "MLRS_BM_21_Grad",
+    "SPH_2S1_Gvozdika",
+    "SPH_2S3_Akatsia"
+  ],
+  "logistics_units": [
+    "Transport_Ural_375",
+    "Transport_UAZ_469"
+  ],
+  "infantry_units": [
+    "Paratrooper_AKS",
+    "Paratrooper_RPG_16",
+    "SAM_SA_18_Igla_S_MANPADS"
+  ],
+  "air_defenses": [
+    "SA3Generator",
+    "SA6Generator",
+    "SA8Generator",
+    "SA11Generator",
+    "SA13Generator",
+    "SA15Generator",
+    "ZSU23Generator",
+    "ZU23Generator",
+    "ZU23UralGenerator"
+  ],
+  "requirements": {},
+  "has_jtac": true,
+  "jtac_unit": "MQ_9_Reaper"
+}
