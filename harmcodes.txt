@@ -1,0 +1,52 @@
+adar Codes:
+
+EWR 1L13 S 101
+EWR 55G6 S 102
+SAM SA-10 S-300PS SR 5N66M CS 103
+SAM SA-10 S-300PS SR 64H6E BB 104
+SAM SA-11 Buk SR 9S18M1 SD 107
+SAM SA-6 Kub STR 1S91 6 108
+CP 9S80M1 Sborka DE 109
+SAM SA-10 S-300PS TR 30N6 10 110
+SAM SA-11 Buk LN 9A310M1 11 115
+SAM SA-8 Osa 9A33 8 117
+SAM SA-13 Strela-10M3 9A35M3 13 118
+SAM SA-15 Tor 9A331 15 119
+SAM SA-19 Tunguska 2S6 19 120
+AAA ZSU-23-4 Shilka A 121
+SAM SR P-19 S 122
+SAM SA-3 S-125 TR SNR 3 123
+Rapier FSA Blindfire Tracker RP 124
+Rapier FSA Launcher RT 125
+SAM SA-2 TR SNR-75 Fan Song 2 126
+HQ7 Self-Propelled LN 7 127
+HQ7 Self-Propelled STR HQ 128
+SAM Roland ADS RO 201
+SAM Patriot STR AN/MPQ-53 P 202
+SAM Hawk SR AN/MPQ-50 HK 203
+SAM Hawk TR AN/MPQ-46 HK 204
+SAM Roland SR RO 205
+SAM Hawk CWAR AN/MPQ-55 HK 206
+AAA Gepard A 207
+AAA Vulcan M163 A 208
+CV 1143.5 Admiral Kuznetsov SW 301
+CV 1143.5 Admiral Kuznetsov(2017) SW 320
+CG 1164 Moskva T2 303
+FFL 1124.4 Grisha HP 306
+FF 1135M Rezky TP 309
+FSG 1241.1MP Molniya PS 312
+CGN 1144.2 Piotr Velikiy HN 313
+Ticonderoga class AE 315
+FFG 11540 Neustrashimy TP 319
+Oliver Hazzard Perry class 49 401
+CVN-70 Carl Vinson SS 402
+CVN-71 Theodore Roosevelt SS 403
+CVN-72 Abraham Lincoln SS 404
+CVN-73 George Washington SS 405
+CVN-74 John C. Stennis SS 406
+LHA-1 Tarawa 40 407
+Type 071 Amphibious Transport Dock PS 408
+Type 052B Destroyer MR 409
+Type 052C Destroyer HN 410
+Type 054A Frigate MR 411
+
