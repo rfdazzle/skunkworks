@@ -1,4 +1,4 @@
-adar Codes:
+Radar Codes:
 
 EWR 1L13 S 101
 EWR 55G6 S 102
@@ -49,4 +49,3 @@ Type 071 Amphibious Transport Dock PS 408
 Type 052B Destroyer MR 409
 Type 052C Destroyer HN 410
 Type 054A Frigate MR 411
-
